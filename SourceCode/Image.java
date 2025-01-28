@@ -17,7 +17,8 @@ public class Image {
 
     ImageIcon image;
     JLabel imageLabel;
-                // Output file for storing pixel hex data
+            
+            // Output file for storing pixel hex data
             File outputFile = new File("C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\pixel_data.txt");
             // Input PNG image path
             String imagePath = "C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\TrialImage\\lenna.png";
