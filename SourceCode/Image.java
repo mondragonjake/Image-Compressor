@@ -1,21 +1,50 @@
+
+
+import java.io.File;
+import java.io.IOException;
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
+import javax.swing.*;
+import java.awt.*;
+public class Image {
 
-public class PNGHexExtractor {
-            // Output file for storing pixel hex data
+    ImageIcon image;
+    JLabel imageLabel;
+                // Output file for storing pixel hex data
             File outputFile = new File("C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\pixel_data.txt");
             // Input PNG image path
-            String imagePath = "C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\TrialImage\\blue.png";
+            String imagePath = "C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\TrialImage\\lenna.png";
             Map<String, Integer> hexFrequencyMap = new HashMap<>();
             int width, height;
 
+
+    public Image() {
+    }
+
+    //para ma view an image
+    public void ViewImage() {
+        image = new ImageIcon("C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\TrialImage\\lenna.png");
+        imageLabel = new JLabel(image);
+    }
+
+    public void ViewCompressedImage(BufferedImage decompressImage) {
+        
+        ImageIcon imageIcon = new ImageIcon(decompressImage);
+
+        // Create a JLabel to display the ImageIcon
+        imageLabel = new JLabel(imageIcon);
+    }
+
     
+
+    //para ma extract an RGB values
     public void trainImage() {
         try {
             // Load the PNG image
@@ -62,4 +91,5 @@ public class PNGHexExtractor {
             System.err.println("Error processing the PNG file: " + e.getMessage());
         }
     }
+    
 }

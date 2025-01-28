@@ -4,14 +4,18 @@ import java.util.Map;
 import java.awt.image.BufferedImage;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 public class HuffmanCompression {
 
     Map<String, String> huffmanMap = new HashMap<>();
     Map<String, String> reverseHuffmanMap = new HashMap<>();
+    JLabel imageLabel; 
+    
 
     public void readFile() {
-        String fileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\huffman_tree.txt"; // Replace with the path to your file
+        String fileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\huffman_tree.HUFF"; 
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
@@ -37,7 +41,7 @@ public class HuffmanCompression {
 
     public void compressImage() {
         String inputFileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\pixel_data.txt";
-        String outputFileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\compressed_output.HUFF";
+        String outputFileName = "C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\compressed_output.MMT";
     
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName));
              BufferedWriter writer = new BufferedWriter(new FileWriter(outputFileName))) {
@@ -126,10 +130,12 @@ public class HuffmanCompression {
             }
 
 
-
+            
             // Write the reconstructed image to the output file
             ImageIO.write(image, "png", new File(outputImagePath));
-            System.out.println("Image decompression completed. Output file: " + outputImagePath);
+            imageLabel = new JLabel(new ImageIcon(image));
+
+            
 
             
             // After decompression loop ends

@@ -2,12 +2,26 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.PriorityQueue;
+
+
+import javax.swing.JButton;
+
+
 public class Huffman {
 
-    PNGHexExtractor extraxtHexCode = new PNGHexExtractor();
+    Image extraxtHexCode = new Image();
+    Map<String, String> huffmanMap = new HashMap<>();
+
     Node root;
 
     // Method to create a priority queue from hex codes and frequencies
@@ -67,11 +81,11 @@ public class Huffman {
         root = createRootNode(priorityQueue);
     
         // Write the Huffman codes to the file
-        File huffmanCodeFile = new File("C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\huffman_tree.txt");
+        File huffmanCodeFile = new File("C:\\Users\\jbmon\\OneDrive\\Desktop\\SY-SS\\CMSC 123\\CMSC 123 Lab\\Tryla\\Data\\huffman_tree.HUFF");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(huffmanCodeFile))) {
             // Only open BufferedWriter once here
             printHuffmanCode(root, "", writer);  // Generate and write codes to file
-            System.out.println("Huffman codes successfully written to huffman_tree.txt");
+            System.out.println("Huffman codes successfully written to huffman_tree.HUFF");
         } catch (IOException e) {
             System.err.println("Error writing to huffman_tree.txt: " + e.getMessage());
         }
