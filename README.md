@@ -4,7 +4,7 @@ _This project is developed by **Jake Mondragon**, **Gian Tongzon**, and **Kennet
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Introduction](#introduction)  
 - [Features](#features)  
@@ -16,13 +16,13 @@ _This project is developed by **Jake Mondragon**, **Gian Tongzon**, and **Kennet
 
 ---
 
-## 🧩 Introduction
+## Introduction
 
 This project compresses image data using Huffman Coding. The application converts the RGB values of an image into hexadecimal, calculates their frequency, builds a Huffman tree, and encodes the data as binary. This reduces redundancy and overall file size.
 
 ---
 
-## ✨ Features
+## Features
 
 - Select an image to compress.
 - Extract RGB and convert to Hex values.
@@ -32,27 +32,27 @@ This project compresses image data using Huffman Coding. The application convert
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/jbmondragon/Image-Compressor.git
 cd Image-Compressor
 ```
 
-### 2️⃣ Open in VS Code
+### Open in VS Code
 
 - Ensure the **Java Extension Pack** is installed.
 - Navigate to the `SourceCode/` folder.
 - Open `Main.java`.
 
-### 3️⃣ Run the Application
+### Run the Application
 
 - Click the **Run Java** button (top-right), or  
 - Press **F6**.
 
-### 4️⃣ Build a JAR File (Optional)
+### Build a JAR File (Optional)
 
 - Press `Ctrl + Shift + P` → Open **Command Palette**.
 - Search: **Java: Export Jar**.
@@ -60,7 +60,7 @@ cd Image-Compressor
 - Select all required files.
 - Output: `Image-Compressor.jar`.
 
-### 5️⃣ Run the JAR File
+### Run the JAR File
 
 ```bash
 java -jar Image-Compressor.jar
@@ -72,7 +72,7 @@ Or double-click the `.jar` file (if Java is installed).
 
 ---
 
-## 🛠️ Usage
+## Usage
 
 1. Launch the application.
 2. Choose an image to compress.
@@ -83,7 +83,7 @@ Or double-click the `.jar` file (if Java is installed).
 
 ---
 
-## 🧠 Methodology
+##Methodology
 
 - RGB values extracted from image.
 - Converted to hexadecimal values.
@@ -94,7 +94,7 @@ Or double-click the `.jar` file (if Java is installed).
 
 ---
 
-## 🧮 Algorithm / Design
+## Algorithm / Design
 
 ### Main Algorithms:
 
@@ -105,7 +105,7 @@ Or double-click the `.jar` file (if Java is installed).
 
 ---
 
-## 📊 Data / Dataset
+##  Data / Dataset
 
 - Supports most common image formats: **BMP**, **PNG**, **TIFF**.
 - Extracts per-pixel color data (RGB → Hex).
