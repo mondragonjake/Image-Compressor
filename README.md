@@ -68,7 +68,7 @@ java -jar Image-Compressor.jar
 
 Or double-click the `.jar` file (if Java is installed).
 
-> ⚠️ **Requires Java 21 or higher**
+>  **Requires Java 21 or higher**
 
 ---
 
